@@ -32,7 +32,7 @@
 		@foreach($products as $row)
 		<tr>
 			<td>{!! $row->title_en."<br><br>".$row->title_ar !!}</td>
-			@if(!empty($row->images))
+			@if(!$row->images->isEmpty())
 				<td><img src="{{'uploads/'.$row->images[0]->thumb_250}}" width="100" height="auto"/></td>
 			@else
 				<td></td>

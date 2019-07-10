@@ -30,9 +30,9 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 blog-wrap hvr-float-shadow">
                     <div class="img-wrap">
                         @if(!$row->images->isEmpty())
-                            <img src="{{'uploads/'.$row->images[0]->thumb_250}}" alt="">
+                            <img src="{{asset('uploads/'.$row->images[0]->thumb_250)}}" alt="">
                         @else
-                            <img src="{{'site/en/images/placeholder.png'}}" alt="">
+                            <img src="{{asset('site/en/images/placeholder.png')}}" alt="">
                         @endif
                         <div class="date-holder">
                             <h2>{{$row->project_status_en}}</h2>

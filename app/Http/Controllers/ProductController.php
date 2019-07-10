@@ -164,6 +164,8 @@ class ProductController extends Controller
      */
     public function delete($id)
     {
-        //
+        Products::where('id',$id)->delete();
+        ProductsImages::where('product_id',$id)->delete();
+        return redirect()->route('listProducts');
     }
 }

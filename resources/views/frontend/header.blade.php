@@ -36,10 +36,10 @@
                 </button>
                 <ul class="mainmenu pull-right">
                     <li class="current">
-                        <a href="index.php">Home</a>
+                        <a href="{{route('home')}}">Home</a>
                     </li>
                     <li>
-                        <a href="about-us.php">About US</a>
+                        <a href="#">About US</a>
                     </li>
                     <li>
                         <a href="#">Services</a>
@@ -47,18 +47,16 @@
                     <li class="dropdown">
                         <a href="#">Products</a>
                         <ul class="submenu">
-                            <li><a href="products.php">Passenger Elevators</a></li>
-                            <li><a href="products.php">Construction Elevators</a></li>
-                            <li><a href="products.php">Cargo Elevators</a></li>
-                            <li><a href="products.php">Dumb Waiters</a></li>
-                            <li><a href="products.php">Car Elevators</a></li>
-                            <li><a href="products.php">Disabled Elevators</a></li>
-                            <li><a href="products.php">Hospital Elevators</a></li>
-                            <li><a href="products.php">Escalators</a></li>
+                            @foreach($navProducts as $proItem)
+                                <li><a href="{{route('products',$proItem->id)}}">{{$proItem->title_en}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
+                    {{--<li>--}}
+                        {{--<a href="{{route('products')}}">Products</a>--}}
+                    {{--</li>--}}
                     <li>
-                        <a href="projects.php">Projects</a>
+                        <a href="{{route('projects')}}">Projects</a>
                     </li>
                     <li class="dropdown">
                         <a href="#">Gallery</a>

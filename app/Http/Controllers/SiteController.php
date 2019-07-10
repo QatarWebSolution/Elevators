@@ -92,11 +92,23 @@ class SiteController extends Controller
         return view('frontend.projects',compact('projects'));
     }
 
-    public function products(){
-        return view('frontend.products');
+    public function products($id){
+        return redirect()->route('product_details',['id' => $id]);
     }
 
     public function project_details($id){
-        return view('frontend.project_details');
+        $project = Projects::where('id',$id)->with('images')->first();
+        return view('frontend.project_details',compact('project'));
+    }
+
+    public function product_details($id){
+        if($id != 0){
+            $product = Products::where('id',$id)->with('images')->first();
+        }
+        else{
+            $product = Products::where('id','!=',0)->with('images')->first();
+        }
+        $products = Products::where('id','!=',0)->with('images')->get();
+        return view('frontend.product_details',compact('product','products'));
     }
 }

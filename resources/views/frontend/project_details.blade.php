@@ -1,4 +1,4 @@
-@extends('master')
+@extends('frontend.master')
 @push('styles')
 @endpush
 @section('content')
@@ -14,7 +14,7 @@
                     <!-- /.title -->
                     <!-- .page-breadcumb -->
                     <div class="page-breadcumb pull-right">
-                        <i class="fa fa-home"></i> <a href="index.php">Home</a> <i class="fa fa-angle-right"></i> <span>Projects</span>
+                        <i class="fa fa-home"></i> <a href="{{route('home')}}">Home</a> <i class="fa fa-angle-right"></i> <span>Projects</span>
                     </div>
                     <!-- /.page-breadcumb -->
                 </div>
@@ -24,11 +24,12 @@
     <!-- /#page-title -->
     <section id="blog" class="version-two">
         <div class="container">
+            @if(!empty($project))
             <div class="row">
                 <div class="post-pagination text-right">
                     <ul>
-                        <li class="active"><a href="#">Back</a></li>
-                        <li><a href="#">Next Project</a></li>
+                        <li class="active"><a href="{{route('projects')}}">Back</a></li>
+                        <li><a href="{{route('project_details',$project->id+1)}}">Next Project</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,32 +37,32 @@
                 <!-- .blog-wrap -->
                 <div class="col-lg-12 col-md-12 col-sm-12 blog-wrap hvr-float-shadow">
                     <div class="content-wrap detaildpage">
-                        <div class="status red">Project Status : Ongoing</div>
-                        <img src="images/1.jpg" alt="" class="left-image">
-                        <h2 class="fontbig">Algerian Embassy</h2>
-                        <p>Sed ut perspiciatis unde omnis iritatis et quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore veritatis et quasi architecto.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium
-                        <p>
-                        <p>Totam rem aperiam, eaque ipsa quae ab illo inven- tore veritatis et quasi architecto beatae vitae dict eaque ipsa quae abluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inven- tore veritatis et quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+                        <div class="status red">Project Status : {{$project->project_status_en}}</div>
+                        @if(!$project->images->isEmpty())
+                            <img src="{{asset('uploads/'.$project->images[0]->file)}}" alt="" class="left-image"/>
+                        @endif
+                        <h2 class="fontbig">{{$project->title_en}}</h2>
+                        <p>{{$project->description_en}}</p>
                         <span class="fleft">
                         <div class="row">
                            <div class="col-md-5">Elevator Type :</div>
-                           <div class="col-md-7">Commercial Elevator</div>
+                           <div class="col-md-7">{{$project->elevator_type_en}}</div>
                         </div>
                         <div class="row">
                            <div class="col-md-5">Building Type :</div>
-                           <div class="col-md-7">Commercial Building</div>
+                           <div class="col-md-7">{{$project->building_type_en}}</div>
                         </div>
                         <div class="row">
                            <div class="col-md-5">Location :</div>
-                           <div class="col-md-7">Al Thumama, Doha, Qatar</div>
+                           <div class="col-md-7">{{$project->project_location_en}}</div>
                         </div>
                         <div class="row">
                            <div class="col-md-5">Start Date :</div>
-                           <div class="col-md-7">15-05-2019</div>
+                           <div class="col-md-7">{{$project->start_date_en}}</div>
                         </div>
                         <div class="row">
                            <div class="col-md-5">Handover Date :</div>
-                           <div class="col-md-7">15-05-2019</div>
+                           <div class="col-md-7">{{$project->handover_date_en}}</div>
                         </div>
                      </span>
                     </div>
@@ -70,6 +71,20 @@
                 <!-- .blog-wrap -->
                 <!-- .blog-wrap -->
             </div>
+            @else
+            <div class="row">
+                <div class="post-pagination text-right">
+                    <ul>
+                        <li class="active"><a href="{{route('projects')}}">Back</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div  class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 blog-wrap hvr-float-shadow">
+                    <p>No Projects Found!..</p>
+                </div>
+            </div>
+            @endif
         </div>
     </section>
     <!-- /#blog -->

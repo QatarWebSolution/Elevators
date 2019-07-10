@@ -167,6 +167,8 @@ class ProjectController extends Controller
      */
     public function delete($id)
     {
-        //
+        Projects::where('id',$id)->delete();
+        ProjectsImages::where('project_id',$id)->delete();
+        return redirect()->route('listProjects');
     }
 }
