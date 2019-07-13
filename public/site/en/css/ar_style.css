@@ -6,9 +6,8 @@ Author : Manu Marshal;
 *****************************************
 *****************************************
 **//*** Importing Styles.**/
-@import url('https://fonts.googleapis.com/css?family=Arimo:400,700');
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600');
-@import url('bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=El+Messiri|Tajawal&display=swap');
+@import url('ar_bootstrap.min.css');
 @import url('animate.css');
 @import url('font-awesome.min.css');
 @import url('hover.css');
@@ -22,7 +21,7 @@ Author : Manu Marshal;
 /*** Global Styles.**/
 
 body {
-    font-family: 'Arimo', sans-serif !important;
+    font-family: 'Tajawal', sans-serif !important;
     font-size: 15px;
     line-height: 26px;
     letter-spacing:0px;
@@ -30,7 +29,7 @@ body {
     font-size: 25px !important;
     margin-bottom: 22px !important;
 }.content-wrap.detaildpage p {
-    font-family: 'Arimo', sans-serif !important;
+    font-family: 'Tajawal', sans-serif !important;
     font-size: 15px !important;
     line-height: 25px !important;
     letter-spacing: 0px;
@@ -45,14 +44,14 @@ body {
        padding-bottom: 10px !important;
 }img.left-image {
     width: 45%;
-    float: left;
-    margin: 0px 25px 25px 0px;
+    float: right;
+    margin: 0px 0px 25px 25px;
 }span.fleft .row div:first-child {
     font-weight: bold;
 }
 .status {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     background: #ea2c16;
     color: #fff;
@@ -69,7 +68,9 @@ body {
     width: 48%;
 }
 .fleft {
-    float: left;
+    float: right;
+}#contact-content .contact-info ul li i {
+    margin-left: 20px;
 }
 @media (max-width: 768px) and (min-width: 100px) {
     img.left-image {
@@ -99,7 +100,7 @@ img {
     max-width: 100%;
 }
 p {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .container {
     padding: 0;
@@ -213,7 +214,7 @@ p {
     /*border-right: 1px solid #073D51;*/
 }
 #topbar .contact-info ul li {
-    float: left;
+    float: right;
 }
 #topbar .contact-info ul li a {
     display: inline-block;
@@ -222,7 +223,7 @@ p {
     padding: 0 0px;
     margin-right: 20px;
     color: #A2A2A2;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -343,7 +344,7 @@ header .cart-box .icon {
 header .cart-box span {
     color: #ea2c16;
     font-weight: bold;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .header-fixed {
     position: fixed;
@@ -405,10 +406,10 @@ header nav.mainmenu-container ul > li > ul > li > a {
     line-height: 38px;
     padding: 0 25px;
     position: relative;
-    text-align: left;
+    text-align: right;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 header nav.mainmenu-container ul > li > ul > li > a:after {
     content: '\f105';
@@ -835,7 +836,7 @@ header nav.mainmenu-container ul > li > ul > li > a:hover {
     padding-bottom: 20px;
     position: relative;
     text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .section-title h1:before {
     content: ' ';
@@ -845,7 +846,7 @@ header nav.mainmenu-container ul > li > ul > li > a:hover {
     display: block;
     position: absolute;
     bottom: -2px;
-    left: 0;
+    right: 0;
 }
 
 /**
@@ -932,7 +933,7 @@ header nav.mainmenu-container ul > li > ul > li > a:hover {
     line-height: 35px;
     margin-left: 15px;
     color: #333;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .service-tab-content ul li .fa {
     color: #b31504;
@@ -1359,7 +1360,7 @@ padding: 15px 15px 0px 20px;
     text-transform: uppercase;
     margin: 0;
     margin-bottom:8px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #blog .content-wrap p {
     font-size: 14px;
@@ -1372,6 +1373,8 @@ padding: 15px 15px 0px 20px;
     font-size: 12px !important;
     line-height: 19px !important;
     letter-spacing: 0px !important;
+    padding-right: 13px;
+    display: block;
 }
 #blog .content-wrap ul {
     margin-top: 10px;
@@ -1402,7 +1405,7 @@ padding: 15px 15px 0px 20px;
     display: inline-block;
     font-size: 13px;
     color: #AAA9A9;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 /**
 * Clients Styles.
@@ -1520,7 +1523,7 @@ footer .widget h3 {
     padding-bottom: 15px;
     margin-bottom: 25px;
     border-bottom: 1px solid #0E3C4F;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 footer .widget p {
     font-size: 15px;
@@ -1533,8 +1536,8 @@ footer .widget a.read-more {
     line-height: 24px;
 }
 footer .widget .social {
-    text-align: left;
-    margin-top: 10px;
+    text-align: right;
+    margin-top: 14px;
 }
 footer .widget .social li {
     display: inline;
@@ -1549,7 +1552,7 @@ footer .widget .social li a {
     line-height: 40px;
     color: #224755;
     font-size: 17px;
-    margin-right: 5px;
+       margin-left: 5px;
     -webkit-transition: all .3s ease;
     transform: rotate(0deg);
     transition: all .3s ease;
@@ -1699,22 +1702,23 @@ footer .footer-menu .footer-nav-toggler {
 }
 #our-mission ul li i {
     position: absolute;
-    left: -28px;
-    top: 4px;
+    right: -28px;
+    top: 5px;
 }
 
 #our-mission ul li {
     font-size: 15px;
     line-height: 24px;
     color: #333;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     position: relative;
-    left: 30px;    font-weight: bold;
+    right: 30px;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 #our-mission ul li .fa {
     color: #b31504;
-    margin-right: 10px;
+    margin-left: 10px;
     font-size: 16px;
 }
 #our-mission .img-holder:hover:before {
@@ -1748,10 +1752,11 @@ footer .footer-menu .footer-nav-toggler {
     font-size: 21px;
     margin-bottom: 20px;
 }
+
 #our-mission .image-caption .content {
     background: #0e2d83;
-    padding-left: 45px;
-    padding-right: 39px;
+    padding-right: 45px;
+    padding-left: 39px;
     padding-top: 35px;
     padding-bottom: 30px;
 }
@@ -1788,7 +1793,7 @@ footer .footer-menu .footer-nav-toggler {
 }
 #featured .content {
     margin-bottom: 30px;
-    padding-left: 20px;
+    padding-right: 20px;
 }
 #featured .content:last-child {
     margin-bottom: 0;
@@ -1804,7 +1809,7 @@ footer .footer-menu .footer-nav-toggler {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 10px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #featured .content-wrap p {
     font-size: 15px;
@@ -2155,7 +2160,7 @@ font-size: 15px;
     margin-bottom: 31px;
     border-bottom: 1px solid transparent;
     padding-bottom: 11px;
-    position: relative;
+    position: relative;    text-align: right;
 }
 #blog-post .sidebar-widget h4:before {
     content: ' ';
@@ -2165,7 +2170,7 @@ font-size: 15px;
     display: block;
     position: absolute;
     bottom: -2px;
-    left: 0;
+    right: 0;
 }
 #blog-post .sidebar-widget form.search-form {
     border: 1px solid #E9E9E9;
@@ -2203,25 +2208,25 @@ font-size: 15px;
 }
 #blog-post .sidebar-widget .category-list li a {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 43px;
     color: #333;
     border-bottom: 1px solid #DCDCDC;
     font-weight: 500;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     position: relative;
     -webkit-transition: all .3s ease;
-    transition: all .3s ease;
+    transition: all .3s ease;    text-align: right;
 }
 #blog-post .sidebar-widget .category-list li:last-child a {
     border-bottom: 0;
 }
 #blog-post .sidebar-widget .category-list li a:after {
-    content: '\f105';
+    content: '\f104';
     font-family: 'FontAwesome';
     line-height: 43px;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
 }
 #blog-post .sidebar-widget .category-list li a .fa {
@@ -2261,7 +2266,7 @@ font-size: 15px;
     text-transform: none;
     margin: 0;
     transition: all .3s ease;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     /*margin-bottom: 20px;*/
 }
 #blog-post .sidebar-widget .popular-post li .content-wrap a:hover h5 {
@@ -2299,7 +2304,7 @@ font-size: 15px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     margin-top: 10px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #blog-post .sidebar-widget .tag-cloud a:hover {
     color: #fff;
@@ -2707,13 +2712,13 @@ font-size: 15px;
     line-height: 26px;
     color: #8e8d8d;
     font-weight: 600;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #blog-post.single-post article ul li .fa-circle {
     font-size: 7px;
     position: relative;
     bottom: 2px;
-    margin-right: 7px;
+    margin-left: 7px;
     transition: all .3s ease;
 }
 #blog-post.single-post article ul li .fa:hover {
@@ -2973,7 +2978,7 @@ font-size: 15px;
     line-height: 22px;
     margin-bottom: 30px;
     margin-top: 20px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #blog-post .no-search-content .suggesion i {
     margin-right: 10px;
@@ -3628,7 +3633,7 @@ header.home-v2 ul.mainmenu > li.current > a {
 #our-achivement .achivement ul li span b {
     font-weight: bold;
     font-size: 40px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     transition: all .3s ease;
 
 }
@@ -3702,7 +3707,7 @@ header.home-v2 ul.mainmenu > li.current > a {
 }
 #request-a-qoute-container .tab-content form ul li label {
     display: block;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     font-size: 15px;
     color: #000000;
     font-weight: normal;
@@ -3982,7 +3987,7 @@ header.header-v3 .col-lg-9 ul li span {
     vertical-align: bottom;
 }
 header.header-v3 .col-lg-9 ul li span .number {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 header.header-v3 .col-lg-9 ul li span b {
     display: block;
@@ -4176,7 +4181,7 @@ header.header-v4 .col-lg-9 ul li span {
     vertical-align: bottom;
 }
 header.header-v4 .col-lg-9 ul li span .number {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 header.header-v4 .col-lg-9 ul li span b {
     display: block;
@@ -4648,7 +4653,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     font-size: 14px;
     color: #8E8D8D;
     font-weight: 600;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .cart-page .table > tbody > tr > td.del-item {
     text-align: center;
@@ -4708,7 +4713,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     font-weight: normal;
     line-height: 36px;
     color: #000000;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .cart-page .add-to-cart-wrap {
     text-align: right;
@@ -4721,7 +4726,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     font-weight: 700;
     color: #fff;
     padding: 0 40px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .cart-page .add-to-cart-wrap a:before {
     background: #b31504;
@@ -4745,7 +4750,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
 }
 .cart-page .cart-total-box .cart-total {
     background: #F9F9F9;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .cart-page .cart-total-box .proceed-to-checkout {
     text-align: right;
@@ -4758,7 +4763,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     font-weight: 700;
     color: #fff;
     padding: 0 40px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 .cart-page .cart-total-box .proceed-to-checkout a:before {
     background: #b31504;
@@ -4797,7 +4802,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     color: #8E8D8D;
     margin-bottom: 5px;
     font-weight: 500;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #checkout-content input[type="text"] {
     width: 100%;
@@ -4807,7 +4812,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     border: 1px solid #E2E2E2;
     outline: none;
     padding: 0 20px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #checkout-content input[type="text"]:last-child {
     margin-bottom: 0;
@@ -4901,7 +4906,7 @@ header.header-v4 .mainmenu-container ul li.top-icons a:before {
     font-size: 14px;
     font-weight: normal;
     position: relative;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #checkout-content .order-box ul li .note .fa {
     font-size: 35px;
@@ -5505,7 +5510,7 @@ background: #fff;
     letter-spacing: 0px;
     margin: 0;
     margin-bottom: 22px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     text-transform: uppercase;
 }
 #video-section-construction .video-text p {
@@ -5551,7 +5556,7 @@ font-size: 26px;
     line-height: 28px;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 17px;font-family: 'Dosis', sans-serif;
+    margin-bottom: 17px;font-family: 'Tajawal', sans-serif !important;
 }
 #welcome-to-construct .col-lg-7 p {
     font-size: 16px;
@@ -5576,7 +5581,7 @@ font-size: 26px;
 #welcome-to-construct .col-lg-7 ul {
     display: table-cell;
     vertical-align: middle;
-    padding-right: 95px;
+    padding-right: 0px;
 }
 #welcome-to-construct .col-lg-7 ul:last-child {
     padding-right: 0;
@@ -5681,7 +5686,7 @@ font-size: 26px;
 }
 #testimonials-construct-home .owl-theme .owl-controls {
     position: absolute;
-    right: 0;
+    left: 0;
     top: -90px;
 }
 #testimonials-construct-home .owl-theme .owl-nav {
@@ -5842,7 +5847,7 @@ font-size: 26px;
     line-height: 20px;
     padding: 66px 15px 8px 15px;
     font-weight: 500;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     text-transform: uppercase;
 }
 #blog-construct .single-blog-post .img-holder .date b {
@@ -5885,7 +5890,7 @@ font-size: 26px;
     padding: 0 12px;
     color: #8E8D8D;
     font-weight: 500;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     transition: all .3s ease;
 }
 #blog-construct .single-blog-post ul li span {
@@ -5935,7 +5940,7 @@ font-size: 26px;
 /** ====== Great construct team mover styles ====== **/
 
 #great-construct-team {
-    background: #162342 url(../images/callus.jpg) center center no-repeat;
+    background: #162342 url(../images/ar_callus.jpg) center center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     padding: 50px 0;
@@ -5956,14 +5961,14 @@ font-size: 26px;
     line-height: 26px;
     margin-bottom: 23px;
     font-style: italic;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }
 #great-construct-team p b {
     font-size: 34px;
     color: #e8a101;
     font-weight: bold;
-    font-family: 'Dosis', sans-serif;
-    margin-right: 10px;
+    font-family: 'Tajawal', sans-serif !important;
+    margin-left: 10px;
     font-style: italic;
 }
 #great-construct-team p.has-btn {
@@ -5984,7 +5989,7 @@ font-size: 26px;
     padding: 0 27px;
     position: relative;
     bottom: 5px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 #great-construct-team p.has-btn a:before {
     background: #FFBB00;
@@ -6046,13 +6051,13 @@ footer.construct .widget .contact-info li span {
 }
 footer.construct .widget .contact-info li span {
     line-height: 21px;
-    padding-left: 15px;
-    font-family: 'Arimo', sans-serif;
+    padding-right: 15px;
+    font-family: 'Tajawal', sans-serif !important;
 }
 footer.construct .widget .our-services li a {
     color: #bfbfbf;
     text-transform: capitalize;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     border-bottom: 1px solid #2C2C2E;
     display: block;
     padding-bottom: 5px;
@@ -6074,8 +6079,11 @@ footer.construct .widget .our-services li a:before {
     color: #636363;
     font-size: 14px;
     line-height: 14px;
-    margin-right: 15px;
+    margin-left: 15px;
     transition: all .3s ease;
+    float: right;
+    top: 6px;
+    position: relative;
 }
 footer.construct .widget img.positioned {
     margin-top: 0px;
@@ -6145,7 +6153,7 @@ ul.why-choose-us-facts li .content {
 ul.why-choose-us-facts li .content h4 {
   color: #000000;
   font-weight: bold;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Tajawal', sans-serif !important;
   font-size: 16px;
   line-height: 26px;
   text-transform: uppercase;
@@ -6249,7 +6257,7 @@ ul.why-choose-us-facts li .content p {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Tajawal', sans-serif !important;
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -6356,7 +6364,7 @@ ul.why-choose-us-facts li .content p {
     font-size: 14px;
     line-height: 26px;
     color: #8D8D8D;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     letter-spacing: .025em;
 }
 
@@ -6407,7 +6415,7 @@ ul.why-choose-us-facts li .content p {
 }
 .single-service-that-we-offer .content p {
     font-size: 14px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     color: #8D8D8D;
 }
 
@@ -6459,7 +6467,7 @@ ul.why-choose-us-facts li .content p {
 #our-expertize .single-expertize p {
   margin: 0;
   font-size: 14px;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Tajawal', sans-serif !important;
   color: #B8B8B7;  
 }
 
@@ -6511,7 +6519,7 @@ header.construct.header-curvy .logo {
     margin: 0;
     padding: 0px 0;
     height: 100%;
-    padding-right: 70px;
+    padding-right: 70px;text-align: left;
 }
 header.construct.header-curvy .logo img {
     position: relative;
@@ -6559,7 +6567,7 @@ header.construct.header-curvy .mainmenu-container > ul > li > a {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     padding: 0 18px;
 }
 header.construct.header-curvy ul.top-icons-wrap > li > a {
@@ -6773,7 +6781,7 @@ header.construct.header-curvy.header-fixed .mainmenu-container > ul > li.dropdow
     margin-bottom: 0;
 }
 .service-two-tab-title ul li a {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     display: inline-block;
     background: #F9F9F9;
     border: 1px solid #E5E5E5;
@@ -6846,7 +6854,7 @@ header.construct.header-curvy.header-fixed .mainmenu-container > ul > li.dropdow
 .single-sidebar.call-to-action-box .img-box .img-caption h4 {
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     font-weight: bold;
     font-size: 18px;
     margin: 0;
@@ -6855,7 +6863,7 @@ header.construct.header-curvy.header-fixed .mainmenu-container > ul > li.dropdow
 .single-sidebar.call-to-action-box .img-box .img-caption a {
     color: #fff;
     text-transform: capitalize;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     font-size: 16px;
     margin: 0;    
     font-style: italic;
@@ -6887,7 +6895,7 @@ header.construct.header-curvy.header-fixed .mainmenu-container > ul > li.dropdow
     font-size: 14px;
     text-transform: uppercase;
     border-bottom: 1px solid #DEDEDE;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     font-weight: 500;
     padding: 25px 0px;
     display: inline-block;
@@ -6939,7 +6947,7 @@ header.construct.header-curvy.header-fixed .mainmenu-container > ul > li.dropdow
     color: #fff;
     font-size: 11px;
     margin: 0;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     font-weight: 500 !important;
     line-height: 18px !important;
 }
@@ -6961,8 +6969,8 @@ header.construct.header-curvy.header-fixed .mainmenu-container > ul > li.dropdow
     vertical-align: middle;
 }
 #blog.version-two .blog-wrap .content-wrap {
-background: rgba(221, 221, 221, 0.22);
-    padding-left: 30px;
+    background: rgba(221, 221, 221, 0.22);
+    padding-right: 30px;
     border: 1px solid #ddd;
 }
 #blog.version-two .blog-wrap .content-wrap:before {
@@ -6974,10 +6982,11 @@ background: rgba(221, 221, 221, 0.22);
 }
 .post-pagination.text-right {
     text-align: right;
-    float: right;
+    float: left;
     padding-right: 15px;
     top: -30px;
     position: relative;
+    left: 14px;
 }
 
 /* contact content customization styles */
@@ -7029,7 +7038,7 @@ background: rgba(221, 221, 221, 0.22);
 }
 #contact-content .contact-info ul li {
     border: 1px solid #ddd;
-    padding: 15px 0px 15px 25px;
+    padding: 15px 25px 15px 25px;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -7077,7 +7086,7 @@ h1.black {
     text-align: center;
     padding: 56px 18px 20px;
     text-transform: uppercase;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 
 }
 #blog-post .blog-content .img-holder .date-holder b {
@@ -7109,7 +7118,7 @@ h1.black {
     padding-right: 30px;
     display: block;
     font-weight: 500;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     transition: all .3s ease;
 }
 #blog-post article .meta li a:hover {
@@ -7170,7 +7179,7 @@ h1.black {
     padding-left: 30px;
 }
 .blog-content article.search-result .content span {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     font-size: 15px;
     font-style: italic;
     color: #9F9F9F;
@@ -7374,7 +7383,7 @@ h1.black {
     color: rgb(222, 222, 222);
     font-size: 15px;
     font-weight: 500;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
     line-height: 15px;
 }
 .single-project-item:hover .content {
@@ -7537,12 +7546,14 @@ header.construct.header-curvy .mainmenu-container > ul.mainmenu.one-page-scroll-
 }.fadebackg {
     background: rgba(18, 46, 126, 0.76);
     padding: 8px 25px !important;
+        text-align: right;
 }span.red {
     color: #f35442;
 }
 .contnback {
 background: rgba(56, 56, 56, 0.76);
     padding: 8px 25px !important;
+    text-align: right;
     }
     .contnback p {
         margin: 0px !important;
@@ -7560,7 +7571,7 @@ background: rgba(56, 56, 56, 0.76);
     text-transform: uppercase;
     font-size: 3rem;
     margin-bottom: 5px !important;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tajawal', sans-serif !important;
 }p.wine {
     float: none;
     margin: 0 auto;
@@ -7617,10 +7628,12 @@ padding: 0px 5px !important;
 }
 
 
-
+input.btnRegister {
+    text-align: center;
+}
 
 .register{
-    background: -webkit-linear-gradient(left, #0e2d83, #00bbf1);
+    background: -webkit-linear-gradient(left, #00bbf1, #0e2d83);
     padding: 3px;
 }
 .register-left{
@@ -7836,4 +7849,12 @@ label {
     width: 100%;
 }.container.register {
     width: 100% !important;
+}
+
+i.fa.fa-phone {
+    -ms-transform: rotate(263deg);
+    -webkit-transform: rotate(263deg);
+    transform: rotate(263deg);
+}input {
+    text-align: right;
 }

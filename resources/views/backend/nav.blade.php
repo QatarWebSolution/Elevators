@@ -20,5 +20,16 @@
                 <li  class="{{isActiveRoute('listProducts')}}"><a href="{{route('listProducts')}}"><span class="lbl">Product List</span></a></li>
             </ul>
         </li>
+        {{--<li class="blue with-sub {{areActiveRoutes(['admin.news','admin.newsSave','admin.contacts','admin.contactsSave'])}}">--}}
+	            {{--<span>--}}
+	                {{--<i class="font-icon font-icon font-icon-post {{areActiveRoutes(['admin.news','admin.newsSave','admin.contacts','admin.contactsSave'])}}"></i>--}}
+	                {{--<span class="lbl">Media Center</span>--}}
+	            {{--</span>--}}
+            {{--<ul>--}}
+                {{--<li class="{{areActiveRoutes(['admin.news','admin.newsSave'])}}">--}}
+                    {{--<a href="{{route('admin.news')}}"><span class="lbl">News</span></a>--}}
+                {{--</li>--}}
+            {{--</ul>--}}
+        {{--</li>--}}
     </ul>
 </nav><!--.side-menu-->

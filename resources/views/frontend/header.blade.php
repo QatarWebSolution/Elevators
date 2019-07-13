@@ -5,7 +5,9 @@
             <div class="social pull-right">
                 <button type="button" class="dummypopu" data-toggle="modal" data-target="#myModal"><i class="fa fa-user"></i>&nbsp; Login User</button>
                 <div class="langu">
-                    Language : <a href="" class="active">English</a>&nbsp; / &nbsp;<a href="">Arabic</a>
+                    Language :
+                    <a href="{{route('locale','en')}}" class="{{\Illuminate\Support\Facades\App::isLocale('en')?'active':''}}">English</a>&nbsp; / &nbsp;
+                    <a href="{{route('locale','ar')}}" class="{{\Illuminate\Support\Facades\App::isLocale('ar')?'active':''}}">Arabic</a>
                 </div>
             </div>
             <!-- /.social -->
@@ -39,10 +41,10 @@
                         <a href="{{route('home')}}">Home</a>
                     </li>
                     <li>
-                        <a href="#">About US</a>
+                        <a href="{{route('about')}}">About US</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="{{route('services')}}">Services</a>
                     </li>
                     <li class="dropdown">
                         <a href="#">Products</a>
@@ -61,18 +63,18 @@
                     <li class="dropdown">
                         <a href="#">Gallery</a>
                         <ul class="submenu">
-                            <li><a href="#">Image Gallery</a></li>
-                            <li><a href="#">Video Gallery</a></li>
+                            <li><a href="{{route('image_gallery')}}">Image Gallery</a></li>
+                            <li><a href="{{route('video_gallery')}}">Video Gallery</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Downloads</a>
-                    </li>
+                    {{--<li>--}}
+                        {{--<a href="{{route('downloads')}}">Downloads</a>--}}
+                    {{--</li>--}}
                     <li class="dropdown">
                         <a href="#">Contact Us</a>
                         <ul class="submenu">
-                            <li><a href="#">Contact Us Now</a></li>
-                            <li><a href="#">Send Enquiry</a></li>
+                            <li><a href="{{route('contact')}}">Contact Us Now</a></li>
+                            <li><a href="{{route('enquiry')}}">Send Enquiry</a></li>
                         </ul>
                     </li>
                 </ul>

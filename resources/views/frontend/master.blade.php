@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EUROPE ELEVATORS | HOME</title>
+    <title>EUROPE ELEVATORS | @yield('title') </title>
     <!-- Responsive Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- main stylesheet -->

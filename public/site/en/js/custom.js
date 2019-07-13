@@ -627,3 +627,47 @@ function expertizeRoundCircle () {
 
 
 
+
+
+ $(function () {
+   $("#electricalele").click(function () {
+   if ($(this).is(":checked")) {
+   $("#electric").show();
+   $("#AddPassport").hide();
+   } else {
+   $("#electric").hide();
+   $("#AddPassport").show();
+   }
+   });
+
+    $("#Hydraulic").click(function () {
+   if ($(this).is(":checked")) {
+   $("#hydolic").show();
+   $("#AddsPassport").hide();
+   } else {
+   $("#hydolic").hide();
+   $("#AddsPassport").show();
+   }
+   });
+
+
+   $("#espeed").click(function () {
+   if ($(this).is(":checked")) {
+   $("#elespeed").show();
+   $("#Adds").hide();
+   } else {
+   $("#elespeed").hide();
+   $("#Adds").show();
+   }
+   });
+
+    $("#hspeed").click(function () {
+   if ($(this).is(":checked")) {
+   $("#hyspeed").show();
+   $("#Addsnone").hide();
+   } else {
+   $("#hyspeed").hide();
+   $("#Addsnone").show();
+   }
+   });
+   });
