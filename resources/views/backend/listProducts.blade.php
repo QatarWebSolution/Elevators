@@ -33,7 +33,7 @@
 		<tr>
 			<td>{!! $row->title_en."<br><br>".$row->title_ar !!}</td>
 			@if(!$row->images->isEmpty())
-				<td><img src="{{'uploads/'.$row->images[0]->thumb_250}}" width="100" height="auto"/></td>
+				<td><img src="{{asset('uploads/'.$row->images[0]->thumb_250)}}" width="100" height="auto"/></td>
 			@else
 				<td></td>
 			@endif

@@ -144,7 +144,6 @@
 
                     <div class="col-xs-4">
                         <img src="{{asset('uploads/'.$img->thumb_250)}}" width="100" height="auto"/>
-                        <a href=""><i class="font-icon font-icon-close-2 color-red" style="position: absolute;left: 106px;top: -10px;"></i></a>
                     </div>
 
                 @endforeach

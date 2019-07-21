@@ -5,127 +5,41 @@
     <section class="rev_slider_wrapper construct-banner-wrapper">
         <div id="slider1" class="rev_slider"  data-version="5.0">
             <ul>
-                <li data-transition="fade">
-                    <img src="images/slider-1.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
-                         data-x="left" data-hoffset="180"
-                         data-y="top" data-voffset="170"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="900">
-                        <h2>Welcome to Europe <span class="red"> Elevators</span></h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption contnback"
-                         data-x="left" data-hoffset="180"
-                         data-y="top" data-voffset="240"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1500">
-                        <p>Europe Elevators is a leading company in Doha, Qatar.<br/>Our website is aesthetically and functionally designed to serve our valuable clients</p>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption"
-                         data-x="left" data-hoffset="180"
-                         data-y="top" data-voffset="320"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="2500">
-                        <a href="#" class="hvr-bounce-to-right">Learn More</a>
-                    </div>
-                </li>
-                <li data-transition="fade">
-                    <img src="images/slider-2.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg norfont"
-                         data-x="right" data-hoffset="150"
-                         data-y="top" data-voffset="160"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="800">
-                        <h2>We supply and install all types of elevators</h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption widthall"
-                         data-x="right" data-hoffset="150"
-                         data-y="top" data-voffset="230"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1100">
-                        <ul class="widhtl">
-                            <li><span>Passenger Elevators</span></li>
-                            <li><span>Construction Elevators</span></li>
-                            <li><span>Cargo Elevators</span></li>
-                            <li><span>Dumb Waiters</span></li>
-                            <br />
-                            <li><span>Car Elevators</span></li>
-                            <li><span>Disabled Elevators</span></li>
-                            <li><span>Hospital Elevators</span></li>
-                            <li><span>Escalators</span></li>
-                        </ul>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption"
-                         data-x="right" data-hoffset="150"
-                         data-y="top" data-voffset="320"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1700">
-                        <a href="#" class="hvr-bounce-to-right">View all Services</a>
-                    </div>
-                </li>
-                <li data-transition="fade">
-                    <img src="images/slider-3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="130"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="900">
-                        <h2>We Are The Leading</h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="200"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1200">
-                        <h2><span class="red">Elevators</span> Company in Doha</h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption contnback"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="270"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1600">
-                        <p class="text-center">Our website is aesthetically and functionally designed to serve our valuable clients,<br />
-                            ever-supporting vendors, consultants, contractors and the general public.
-                        </p>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="360"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1900">
-                        <a href="#" class="hvr-bounce-to-right">Learn More</a>
-                    </div>
-                </li>
+                @foreach($sliders as $slider)
+                    <li data-transition="fade">
+                        <img src="uploads/{{$slider->image}}"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
+                             data-x="left" data-hoffset="180"
+                             data-y="top" data-voffset="170"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="o:0"
+                             data-transform_out="o:0"
+                             data-start="900">
+                            <h2>{{$slider->title_en}}</h2>
+                        </div>
+                        <div class="tp-caption sfb tp-resizeme construct-banner-caption contnback"
+                             data-x="left" data-hoffset="180"
+                             data-y="top" data-voffset="240"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="o:0"
+                             data-transform_out="o:0"
+                             data-start="1500">
+                            <p>{{$slider->description_en}}</p>
+                        </div>
+                        <div class="tp-caption sfb tp-resizeme construct-banner-caption"
+                             data-x="left" data-hoffset="180"
+                             data-y="top" data-voffset="320"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="o:0"
+                             data-transform_out="o:0"
+                             data-start="2500">
+                            <a href="{{$slider->link_en}}" class="hvr-bounce-to-right">Learn More</a>
+                        </div>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </section>

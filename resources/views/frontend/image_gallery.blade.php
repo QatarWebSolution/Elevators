@@ -30,150 +30,24 @@
     <section id="project-version-one" >
         <div class="container mt30">
             <div class="row normal-gallery" id="image-gallery-mix">
+            @foreach($items as $row)
                 <div class="col-lg-4 col-sm-6 col-xs-12 tank outside single-project-item mix">
                     <div class="img-wrap">
-                        <img src="/site/en/images/1.jpg" alt="">
+                        <img src="{{asset('uploads/'.$row->thumb_250)}}" alt="">
                         <div class="content-wrapper hvr-sweep-to-right">
                             <div class="content">
                                 <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/1.jpg"><i class="fa fa-search-plus"></i></a>
+                                    <a data-fancybox-group="project-v1" title="" class="fancybox" href="{{asset('uploads/'.$row->file)}}"><i class="fa fa-search-plus"></i></a>
                                 </div>
                                 <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
+                                    <h4>{{$row->title_en}}</h4>
+                                    <span>{{$row->description_en}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 plumbing outside single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/2.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/2.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 drain plumbing bathroom single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/3.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/3.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 kitchen outside drain bathroom single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/4.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/4.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 kitchen  bathroom single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/5.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/5.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 kitchen drain  single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/6.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/6.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 kitchen drain bathroom single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/7.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/7.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 kitchen drain bathroom single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/8.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/8.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 server-line drain bathroom single-project-item mix">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/9.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a data-fancybox-group="project-v1" title="Elevators" class="fancybox" href="images/9.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Elevators</h4>
-                                    <span>Lorem ipsum dolor sit amet, cons ctetur adipisicing.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            @endforeach    
             </div>
         </div>
     </section>

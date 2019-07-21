@@ -34,48 +34,19 @@
     <section id="video-section-construction">
         <div class="container">
             <div class="clearfix">
+            @foreach($items as $row)
                 <div class="col-md-4 mb30">
                     <div class="video-preview wow" data-wow-offset="15">
-                        <a href="http://www.youtube.com/watch?v=InDouu6mNh0" class="video-fancybox">
+                        <a href="{{asset('uploads/'.$row->file)}}" class="video-fancybox">
                             <img src="/site/en/images/left-about.jpg" alt="">
                         </a>
                     </div>
+                    <!-- <video width="300" controls>
+                        <source src="{{asset('uploads/'.$row->file)}}" type="video/mp4">
+                        Your browser does not support this video.
+                    </video> -->
                 </div>
-                <div class="col-md-4 mb30">
-                    <div class="video-preview wow" data-wow-offset="15">
-                        <a href="http://www.youtube.com/watch?v=InDouu6mNh0" class="video-fancybox">
-                            <img src="/site/en/images/left-about.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb30">
-                    <div class="video-preview wow" data-wow-offset="15">
-                        <a href="http://www.youtube.com/watch?v=InDouu6mNh0" class="video-fancybox">
-                            <img src="/site/en/images/left-about.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb30">
-                    <div class="video-preview wow" data-wow-offset="15">
-                        <a href="http://www.youtube.com/watch?v=InDouu6mNh0" class="video-fancybox">
-                            <img src="/site/en/images/left-about.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb30">
-                    <div class="video-preview wow" data-wow-offset="15">
-                        <a href="http://www.youtube.com/watch?v=InDouu6mNh0" class="video-fancybox">
-                            <img src="/site/en/images/left-about.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb30">
-                    <div class="video-preview wow" data-wow-offset="15">
-                        <a href="http://www.youtube.com/watch?v=InDouu6mNh0" class="video-fancybox">
-                            <img src="/site/en/images/left-about.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
+            @endforeach    
             </div>
         </div>
     </section>

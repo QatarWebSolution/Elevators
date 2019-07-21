@@ -8,139 +8,54 @@
     <section class="rev_slider_wrapper construct-banner-wrapper">
         <div id="slider1" class="rev_slider"  data-version="5.0">
             <ul>
-                <li data-transition="fade">
-                    <img src="/site/en/images/slider-1.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
-                         data-x="left" data-hoffset="180"
-                         data-y="top" data-voffset="170"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="900">
-                        <h2>Welcome to Europe <span class="red"> Elevators</span></h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption contnback"
-                         data-x="left" data-hoffset="180"
-                         data-y="top" data-voffset="240"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1500">
-                        <p>Europe Elevators is a leading company in Doha, Qatar.<br/>Our website is aesthetically and functionally designed to serve our valuable clients</p>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption"
-                         data-x="left" data-hoffset="180"
-                         data-y="top" data-voffset="320"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="2500">
-                        <a href="#" class="hvr-bounce-to-right">Learn More</a>
-                    </div>
-                </li>
-                <li data-transition="fade">
-                    <img src="/site/en/images/slider-2.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg norfont"
-                         data-x="right" data-hoffset="150"
-                         data-y="top" data-voffset="160"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="800">
-                        <h2>We supply and install all types of elevators</h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption widthall"
-                         data-x="right" data-hoffset="150"
-                         data-y="top" data-voffset="230"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1100">
-                        <ul class="widhtl">
-                            <li><span>Passenger Elevators</span></li>
-                            <li><span>Construction Elevators</span></li>
-                            <li><span>Cargo Elevators</span></li>
-                            <li><span>Dumb Waiters</span></li>
-                            <br />
-                            <li><span>Car Elevators</span></li>
-                            <li><span>Disabled Elevators</span></li>
-                            <li><span>Hospital Elevators</span></li>
-                            <li><span>Escalators</span></li>
-                        </ul>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption"
-                         data-x="right" data-hoffset="150"
-                         data-y="top" data-voffset="320"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1700">
-                        <a href="#" class="hvr-bounce-to-right">View all Services</a>
-                    </div>
-                </li>
-                <li data-transition="fade">
-                    <img src="/site/en/images/slider-3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="130"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="900">
-                        <h2>We Are The Leading</h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="200"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1200">
-                        <h2><span class="red">Elevators</span> Company in Doha</h2>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption contnback"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="270"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1600">
-                        <p class="text-center">Our website is aesthetically and functionally designed to serve our valuable clients,<br />
-                            ever-supporting vendors, consultants, contractors and the general public.
-                        </p>
-                    </div>
-                    <div class="tp-caption sfb tp-resizeme construct-banner-caption"
-                         data-x="center" data-hoffset="0"
-                         data-y="top" data-voffset="360"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="o:0"
-                         data-transform_out="o:0"
-                         data-start="1900">
-                        <a href="#" class="hvr-bounce-to-right">Learn More</a>
-                    </div>
-                </li>
+                @foreach($sliders as $slider)
+                    <li data-transition="fade">
+                        <img src="uploads/{{$slider->image}}"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <div class="tp-caption sfb tp-resizeme construct-banner-caption fadebackg"
+                             data-x="left" data-hoffset="180"
+                             data-y="top" data-voffset="170"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="o:0"
+                             data-transform_out="o:0"
+                             data-start="900">
+                            <h2>{{$slider->title_en}}</h2>
+                        </div>
+                        <div class="tp-caption sfb tp-resizeme construct-banner-caption contnback"
+                             data-x="left" data-hoffset="180"
+                             data-y="top" data-voffset="240"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="o:0"
+                             data-transform_out="o:0"
+                             data-start="1500">
+                            <p>{{$slider->description_en}}</p>
+                        </div>
+                        <div class="tp-caption sfb tp-resizeme construct-banner-caption"
+                             data-x="left" data-hoffset="180"
+                             data-y="top" data-voffset="320"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="o:0"
+                             data-transform_out="o:0"
+                             data-start="2500">
+                            <a href="{{$slider->link_en}}" class="hvr-bounce-to-right">Learn More</a>
+                        </div>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </section>
+
     <section id="welcome-to-construct">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                    <img src="/site/en/images/left-about.jpg" alt="" class="img-responsive padin wow slideInLeft" data-wow-offset="20">
+                    <img src="/site/{{$about->image}}" alt="" class="img-responsive padin wow slideInLeft" data-wow-offset="20">
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 wow slideInRight" data-wow-offset="20">
                     <h2>Europe Elevators</h2>
-                    <p>The company was established in 2007 (Al aziziya Stars ComER-LF-113plex- Al aziziya Commercial Street - Al aziziya - Qatar ). The company specializes in supply , installation ,repair the (elevators & escalators ). we haven’t any other activities. We supply and install all types of elevators : Towers (at high speeds of up to 6 m .s), Commercial Buildings, Villas and Elevators for special needs. </p>
+                    <p>{{$about->whoweare_en}}</p>
                     <h3>We are available for 24/7 for you requirements</h3>
                     <div class="list-box clearfix">
                         <ul>
@@ -165,168 +80,28 @@
         </div>
         <div class="container-fluid">
             <div class="row normal-gallery gallery-v4" id="image-gallery-mix">
-                <div class="single-project-item mix  tank outside">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/1.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Algerian Embassy" href="images/1.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Algerian Embassy</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix plumbing outside">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/2.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Al Khurais Hotel" href="images/2.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
+                @foreach($projects as $project)
+                    @if(!$project->images->isEmpty())
+                        <div class="single-project-item mix  tank outside">
+                            <div class="img-wrap">
+                                <img src="/uploads/{{$project->images[0]->file}}" alt="">
+                                <div class="content-wrapper hvr-sweep-to-right">
+                                    <div class="content">
+                                        <div class="button-box">
+                                            <a class="fancybox" data-fancybox-group="home-gallery" title="Algerian Embassy" href="/uploads/{{$project->images[0]->file}}"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>{{$project->title_en}}</h4>
+                                            <span>{{$project->elevator_type_en}}<br />Location : {{$project->project_location_en}}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix drain plumbing bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/3.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Interior Design package" href="images/3.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen outside drain bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/4.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Isolation" href="images/4.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen  bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/5.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Roof Repairing" href="images/5.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen drain ">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/6.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Architecture Conslulting" href="images/6.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen drain bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/7.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Building Maintanance" href="images/7.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen drain bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/8.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Algerian Embassy" href="images/8.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen drain bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/9.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Al Khurais Hotel" href="images/9.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-project-item mix kitchen drain bathroom">
-                    <div class="img-wrap">
-                        <img src="/site/en/images/10.jpg" alt="">
-                        <div class="content-wrapper hvr-sweep-to-right">
-                            <div class="content">
-                                <div class="button-box">
-                                    <a class="fancybox" data-fancybox-group="home-gallery" title="Interior Design package" href="images/10.jpg"><i class="fa fa-search-plus"></i></a>
-                                </div>
-                                <div class="text-box">
-                                    <h4>Al Khurais Hotel</h4>
-                                    <span>Commercial Elevator<br />Location : Al Dafna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
-            <div class="view-all-btn text-center"><a href="#" class="view-all hvr-bounce-to-right">view all</a></div>
+            <div class="view-all-btn text-center"><a href="{{route('projects')}}" class="view-all hvr-bounce-to-right">view all</a></div>
         </div>
     </section>
     <section id="featured">
@@ -398,16 +173,18 @@
                         <h2>Quick Enquiry</h2>
                     </div>
                     <div class="backgroundnine wow slideInRight" data-wow-offset="10">
-                        <form class="gettouch">
+                        <form class="gettouch" action="{{route('enquirySave')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="type" value="quick">
                             <div class="row">
                                 <div class="col-md-6">
                                     <input type="text" name="name" placeholder="Your Name *">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="name" placeholder="Email *">
+                                    <input type="text" name="email" placeholder="Email *">
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="number" name="name" placeholder="Phone Number *">
+                                    <input type="number" name="phone" placeholder="Phone Number *">
                                 </div>
                                 <div class="col-md-12">
                                     <textarea name="message" placeholder="Message"></textarea>
@@ -429,50 +206,19 @@
             </div>
             <div class="clearfix">
                 <div class="owl-carousel owl-theme">
+                    @foreach($testimonials as $testimonial)
                     <div class="item">
                         <div class="single-testimonial-construct clearfix">
                             <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/1.jpg" alt="">
+                                <img src="/uploads/{{$testimonial->thumb_250}}}}" alt="">
                             </div>
                             <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
+                                <h3>{{$testimonial->name_en}}<br/><span>{{$testimonial->company_en}}</span></h3>
+                                <p>{{$testimonial->description_en}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="single-testimonial-construct clearfix">
-                            <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/2.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="single-testimonial-construct clearfix">
-                            <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/1.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="single-testimonial-construct clearfix">
-                            <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/2.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -486,9 +232,13 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img src="/site/en/images/clients/1.png" alt="">
-                        </div>
+                        @foreach($projects as $project)
+                            @if(!$project->images->isEmpty())
+                                <div class="item">
+                                    <img src="/uploads/{{$project->images[0]->file}}" alt="">
+                                </div>
+                            @endif
+                        @endforeach
                         <div class="item">
                             <img src="/site/en/images/clients/2.png" alt="">
                         </div>

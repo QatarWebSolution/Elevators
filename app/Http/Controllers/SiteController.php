@@ -2,38 +2,54 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
+use App\Enquiry;
+use App\Mail\QuickEnquiry;
 use App\Projects;
 use App\ProjectsImages;
 use App\Products;
 use App\ProductsImages;
+use App\Gallery;
+use App\Slider;
+use App\Testimonials;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class SiteController extends Controller
 {
 
     public function index()
     {
-        return view('frontend.index');
+        $testimonials = Testimonials::all();
+        $sliders = Slider::all();
+        $projects = Projects::where('id','!=',0)->with('images')->get();
+        $about    =   About::first();
+        return view('frontend.index',compact(['sliders','testimonials','projects','about']));
     }
 
     public function about()
     {
-        return view('frontend.about');
+        $testimonials = Testimonials::all();
+        return view('frontend.about',compact('testimonials'));
     }
 
     public function services()
     {
-        return view('frontend.services');
+        $testimonials = Testimonials::all();
+        return view('frontend.services',compact('testimonials'));
     }
 
     public function image_gallery()
     {
-        return view('frontend.image_gallery');
+        $items = Gallery::where('type','image')->get();
+        return view('frontend.image_gallery',compact('items'));
     }
 
     public function video_gallery()
     {
-        return view('frontend.video_gallery');
+        $items = Gallery::where('type','video')->get();
+        return view('frontend.video_gallery',compact('items'));
     }
 
 
@@ -70,5 +86,28 @@ class SiteController extends Controller
         }
         $products = Products::where('id','!=',0)->with('images')->get();
         return view('frontend.product_details',compact('product','products'));
+    }
+
+    public function enquirySave(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name'        => 'required',
+        ]);
+        if ($validator->fails())
+        {
+            return back()->withErrors($validator->errors())->withInput($request->all());
+        }
+//        return $request->all();
+
+//        Mail::to('jaisonjebin@gmail.com')->send(new QuickEnquiry($request));
+        $enquiry    =   new Enquiry();
+        $enquiry->name  =   $request->name;
+        $enquiry->phone  =   $request->phone;
+        $enquiry->email  =   $request->email;
+        $enquiry->company  =   $request->company;
+        $enquiry->meta  =   json_encode($request->all());
+        $enquiry->type  =   $request->type;
+        $enquiry->save();
+        return back();
     }
 }

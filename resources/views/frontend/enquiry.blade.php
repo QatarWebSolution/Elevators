@@ -42,41 +42,44 @@
                 <div class="col-md-9 register-right">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane profile">
-                            <div class="row register-form">
+                            <form action="{{route('enquirySave')}}" method="post">
+                                @csrf
+                                <input type="hidden" name="type" value="enquiry">
+                                <div class="row register-form">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Name<sup>*</sup></label>
-                                        <input type="text" class="form-control" placeholder="Full Name" value="" />
+                                        <input type="text" name="name" class="form-control" placeholder="Full Name" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Telephone</label>
-                                        <input type="number" class="form-control" placeholder="Phone Number" value="" />
+                                        <input type="number" name="phone" class="form-control" placeholder="Phone Number" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Email<sup>*</sup></label>
-                                        <input type="password" class="form-control" placeholder="Email Address" value="" />
+                                        <input type="password" name="email" class="form-control" placeholder="Email Address" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Company Name</label>
-                                        <input type="password" class="form-control"  placeholder="Your Company Name" value="" />
+                                        <input type="password" name="company" class="form-control"  placeholder="Your Company Name" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Number of Floors</label>
-                                        <input type="number" class="form-control" placeholder="eg: 25" value="" />
+                                        <input type="number" name="Number_Of_Floors" class="form-control" placeholder="eg: 25" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Cargo Elevators</label>
-                                        <input type="text" class="form-control" placeholder="eg:" value="" />
+                                        <input type="text" name="Cargo_Elevators" class="form-control" placeholder="eg:" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -84,56 +87,56 @@
                                         <label>Types Of Elevators<sup>*</sup></label>
                                         <div class="lisinglabel">
                                             <label for="electricalele" class="leftfull">
-                                                <input type="checkbox" id="electricalele" />
+                                                <input type="checkbox" id="electricalele"  name="Types_Of_Elevators" value="Electrical Elevators"/>
                                                 Electrical Elevators
                                             </label>
                                             <label for="Hydraulic" class="leftfull">
-                                                <input type="checkbox" id="Hydraulic" />
+                                                <input type="checkbox" id="Hydraulic" name="Types_Of_Elevators" value="Hydraulic Elevators" />
                                                 Hydraulic Elevators
                                             </label>
                                         </div>
                                         <!-- This is hydraulic elevators section -->
                                         <div id="hydolic" class="iding" style="display: none">
                                             <h3>Hydraulic Elevators Speed</h3>
-                                            <form action="#">
+                                            {{--<form action="#">--}}
                                                 <p>
                                                     <label>
-                                                        <input name="group22" class="with-gap" type="radio" />
+                                                        <input name="Hydraulic_Elevators_Speed" value="Soft Start / Soft Stop" class="with-gap" type="radio" />
                                                         <span>Soft Start / Soft Stop</span>
                                                     </label>
                                                 </p>
-                                            </form>
+                                            {{--</form>--}}
                                         </div>
                                         <!-- End hydraulic elevators section -->
                                         <!-- This is Electrical elevators section -->
                                         <div id="electric" class="iding" style="display: none">
                                             <h3>Electrical Elevators</h3>
-                                            <form action="#">
+                                            {{--<form action="#">--}}
                                                 <p>
                                                     <label>
-                                                        <input name="group1" class="with-gap" type="radio" />
+                                                        <input name="Electrical_Elevators" value="Gearless" class="with-gap" type="radio" />
                                                         <span>Gearless</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group1" class="with-gap" type="radio" />
+                                                        <input name="Electrical_Elevators" value="Traction Machine" class="with-gap" type="radio" />
                                                         <span>Traction Machine</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input class="with-gap" name="group1" type="radio"  />
+                                                        <input class="with-gap" name="Electrical_Elevators" value="WVF" type="radio"  />
                                                         <span>WVF</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group1" type="radio" class="with-gap" />
+                                                        <input name="Electrical_Elevators" value="2Speed" type="radio" class="with-gap" />
                                                         <span>2Speed</span>
                                                     </label>
                                                 </p>
-                                            </form>
+                                            {{--</form>--}}
                                         </div>
                                         <!-- End Electrical elevators section -->
                                     </div>
@@ -143,74 +146,74 @@
                                         <label>Speed of Elevators</label>
                                         <div class="lisinglabel">
                                             <label for="espeed" class="leftfull">
-                                                <input type="checkbox" id="espeed" />
+                                                <input name="Speed_of_Elevators_Electrical Speed" value="Electrical Speed" type="checkbox" id="espeed" />
                                                 Electrical Speed
                                             </label>
                                             <label for="hspeed" class="leftfull">
-                                                <input type="checkbox" id="hspeed" />
+                                                <input name="Speed_of_Elevators_Hydraulic Speed" value="Hydraulic Speed" type="checkbox" id="hspeed" />
                                                 Hydraulic Speed
                                             </label>
                                         </div>
                                         <!-- This is hydraulic elevators speed section -->
                                         <div id="hyspeed" class="iding" style="display: none">
                                             <h3>Hydraulic Elevators Speeds</h3>
-                                            <form action="#">
+                                            {{--<form action="#">--}}
                                                 <p>
                                                     <label>
-                                                        <input name="group01" class="with-gap" type="radio" />
+                                                        <input name="Hydraulic_Elevators_Speeds" value="40cm/s" class="with-gap" type="radio" />
                                                         <span>40cm/s</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group01" class="with-gap" type="radio" />
+                                                        <input name="Hydraulic_Elevators_Speeds" value="60cm/s" class="with-gap" type="radio" />
                                                         <span>60cm/s</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group01" class="with-gap" type="radio" />
+                                                        <input name="Hydraulic_Elevators_Speeds" value="80cm/s-1m/s" class="with-gap" type="radio" />
                                                         <span>80cm/s-1m/s</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group01" class="with-gap" type="radio" />
+                                                        <input name="Hydraulic_Elevators_Speeds" value="Others" class="with-gap" type="radio" />
                                                         <span>Others</span>
                                                     </label>
                                                 </p>
-                                            </form>
+                                            {{--</form>--}}
                                         </div>
                                         <!-- End hydraulic elevators speed section -->
                                         <!-- This is Electrical elevators speed section -->
                                         <div id="elespeed" class="iding" style="display: none">
                                             <h3>Electrical Elevators Speeds</h3>
-                                            <form action="#">
+                                            {{--<form action="#">--}}
                                                 <p>
                                                     <label>
-                                                        <input name="group001" class="with-gap" type="radio" />
+                                                        <input name="Electrical_Elevators_Speeds" value="1M" class="with-gap" type="radio" />
                                                         <span>1M </span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group001" class="with-gap" type="radio" />
+                                                        <input name="Electrical_Elevators_Speeds" value="1.2M/S" class="with-gap" type="radio" />
                                                         <span>1.2M/S</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input class="with-gap" name="group001" type="radio"  />
+                                                        <input class="with-gap" name="Electrical_Elevators_Speeds" value="1.8M/S" type="radio"  />
                                                         <span>1.8M/S</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="group001" type="radio" class="with-gap" />
+                                                        <input name="Electrical_Elevators_Speeds" value="Others" type="radio" class="with-gap" />
                                                         <span>Others</span>
                                                     </label>
                                                 </p>
-                                            </form>
+
                                         </div>
                                         <!-- End Electrical elevators section -->
                                     </div>
@@ -225,18 +228,18 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label>Pit Depth</label>
-                                                            <input type="text" class="form-control"  placeholder="" value="" />
+                                                            <input type="text" name="Pit_Depth" class="form-control"  placeholder="" value="" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label class="fullwidth">Drilling Place Doors</label>
                                                             <label>
-                                                                <input name="12" class="with-gap" type="radio" />
+                                                                <input name="Drilling_Place_Doors" value="Yes" class="with-gap" type="radio" />
                                                                 <span>Yes </span>
                                                             </label>
                                                             <label>
-                                                                <input name="12" class="with-gap" type="radio" />
+                                                                <input name="Drilling_Place_Doors" value="No" class="with-gap" type="radio" />
                                                                 <span>No </span>
                                                             </label>
                                                         </div>
@@ -246,11 +249,11 @@
                                                     <div class="form-group">
                                                         <label class="fullwidth">Machine Room</label>
                                                         <label>
-                                                            <input name="13" class="with-gap" type="radio" />
+                                                            <input name="Machine_Room" value="Yes" class="with-gap" type="radio" />
                                                             <span>Yes </span>
                                                         </label>
                                                         <label>
-                                                            <input name="13" class="with-gap" type="radio" />
+                                                            <input name="Machine_Room" value="No" class="with-gap" type="radio" />
                                                             <span>No </span>
                                                         </label>
                                                     </div>
@@ -259,7 +262,7 @@
                                                     <div class="form-group">
                                                         <label class="fullwidth">No Readiness</label>
                                                         <label>
-                                                            <input name="14" class="with-gap" type="radio" />
+                                                            <input name="No_Readiness" value="Steel Structure" class="with-gap" type="radio" />
                                                             <span>Steel Structure</span>
                                                         </label>
                                                     </div>
@@ -268,11 +271,11 @@
                                                     <div class="form-group">
                                                         <label class="fullwidth">The Readiness of the Place</label>
                                                         <label>
-                                                            <input name="16" class="with-gap" type="radio" />
+                                                            <input name="The_Readiness_of_the_Place" value="Ready" class="with-gap" type="radio" />
                                                             <span>Ready </span>
                                                         </label>
                                                         <label>
-                                                            <input name="16" class="with-gap" type="radio" />
+                                                            <input name="The_Readiness_of_the_Place" value="Not Ready" class="with-gap" type="radio" />
                                                             <span>Not Ready </span>
                                                         </label>
                                                     </div>
@@ -287,23 +290,23 @@
                                         <h3>Accessories</h3>
                                         <div class="lisinglabel pd20">
                                             <label for="a1" class="leftfull">
-                                                <input type="checkbox" id="a1" />
+                                                <input name="Accessories[Intercom]" value="Intercom" type="checkbox" id="a1" />
                                                 Intercom
                                             </label>
                                             <label for="a2" class="leftfull">
-                                                <input type="checkbox" id="a2" />
+                                                <input name="Accessories[Security Key]" value="Security Key" type="checkbox" id="a2" />
                                                 Security Key
                                             </label>
                                             <label for="a3" class="leftfull">
-                                                <input type="checkbox" id="a3" />
+                                                <input name="Accessories[USB]"  value="USB (electrical move elevators)" type="checkbox" id="a3" />
                                                 USB (electrical move elevators)
                                             </label>
                                             <label for="a4" class="leftfull">
-                                                <input type="checkbox" id="a4" />
+                                                <input name="Accessories[Mirror]" value="Mirror" type="checkbox" id="a4" />
                                                 Mirror
                                             </label>
                                             <label for="a5" class="leftfull">
-                                                <input type="checkbox" id="a5" />
+                                                <input name="Accessories[Overload Signal]" value="Overload Signal" type="checkbox" id="a5" />
                                                 Overload Signal
                                             </label>
                                         </div>
@@ -314,19 +317,19 @@
                                         <h3>Steel Structure</h3>
                                         <div class="lisinglabel pd20">
                                             <label for="a11" class="leftfull">
-                                                <input type="checkbox" id="a11" />
+                                                <input name="Steel_Structure[Stainless Steel Cladding]" value="Stainless Steel Cladding" type="checkbox" id="a11" />
                                                 Stainless Steel Cladding
                                             </label>
                                             <label for="a12" class="leftfull">
-                                                <input type="checkbox" id="a12" />
+                                                <input name="Steel_Structure[Stainless Steel with Glass]" value="Stainless Steel with Glass" type="checkbox" id="a12" />
                                                 Stainless Steel with Glass
                                             </label>
                                             <label for="a13" class="leftfull">
-                                                <input type="checkbox" id="a13" />
+                                                <input name="Steel_Structure[Formica]" value="Formica" type="checkbox" id="a13" />
                                                 Formica
                                             </label>
                                             <label for="a14" class="leftfull">
-                                                <input type="checkbox" id="a14" />
+                                                <input name="Steel_Structure[Paint Wood with Suitable Color]" value="Paint Wood with Suitable Color" type="checkbox" id="a14" />
                                                 Paint Wood with Suitable Color
                                             </label>
                                         </div>
@@ -335,19 +338,19 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Electrical Engine Capacity</label>
-                                        <input type="text" class="form-control" placeholder="" value="" />
+                                        <input name="Electrical_Engine_Capacity" type="text" class="form-control" placeholder="" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Hydraulic Engine Capacity</label>
-                                        <input type="text" class="form-control" placeholder="" value="" />
+                                        <input name="Hydraulic_Engine_Capacity" type="text" class="form-control" placeholder="" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Volume of Cabin</label>
-                                        <input type="text" class="form-control" placeholder="" value="" />
+                                        <input name="Volume_of_Cabin" type="text" class="form-control" placeholder="" value="" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -355,19 +358,19 @@
                                         <h3>Finished Cabin</h3>
                                         <div class="lisinglabel pd20">
                                             <label for="a111" class="leftfull">
-                                                <input type="checkbox" id="a111" />
+                                                <input name="Finished_Cabin[Panorama Glass Insulator]" type="checkbox" id="a111" value="Panorama Glass Insulator"/>
                                                 Panorama Glass Insulator
                                             </label>
                                             <label for="a122" class="leftfull">
-                                                <input type="checkbox" id="a122" />
+                                                <input name="Finished_Cabin[Golden Stainless Steel]" type="checkbox" id="a122" value="Golden Stainless Steel"/>
                                                 Golden Stainless Steel
                                             </label>
                                             <label for="a133" class="leftfull">
-                                                <input type="checkbox" id="a133" />
+                                                <input name="Finished_Cabin[Silver Stainless Steel]" type="checkbox" id="a133" value="Silver Stainless Steel"/>
                                                 Silver Stainless Steel
                                             </label>
                                             <label for="a144" class="leftfull">
-                                                <input type="checkbox" id="a144" />
+                                                <input name="Finished_Cabin[Formica]" type="checkbox" id="a144" value="Formica" />
                                                 Formica
                                             </label>
                                         </div>
@@ -381,59 +384,59 @@
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label>Size Section</label>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="Size_Section">
                                                             <option class="hidden">Please select Size</option>
-                                                            <option>70 cm</option>
-                                                            <option>80 cm</option>
-                                                            <option>100 cm</option>
-                                                            <option>Others</option>
+                                                            <option value="70 cm">70 cm</option>
+                                                            <option value="80 cm">80 cm</option>
+                                                            <option value="100 cm">100 cm</option>
+                                                            <option value="Others">Others</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label>Type Doors</label>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="Type_Doors">
                                                             <option class="hidden">Please select Doors</option>
-                                                            <option>Glass</option>
-                                                            <option>Stainless Steel Golden</option>
-                                                            <option>Stainless Steel Silver</option>
-                                                            <option>Paint</option>
+                                                            <option value="Glass">Glass</option>
+                                                            <option value="Stainless Steel Golden">Stainless Steel Golden</option>
+                                                            <option value="Stainless Steel Silver">Stainless Steel Silver</option>
+                                                            <option value="Paint">Paint</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label>Opening Doors</label>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="Opening_Doors">
                                                             <option class="hidden">Please select</option>
-                                                            <option>Center Opening</option>
-                                                            <option>Side Opening</option>
+                                                            <option value="Center Opening">Center Opening</option>
+                                                            <option value="Side Opening">Side Opening</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label>Desired Price</label>
-                                                        <input type="text" class="form-control" placeholder="" value="" />
+                                                        <input name="Desired_Price" type="text" class="form-control" placeholder="" value="" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label>Size Shaft</label>
-                                                        <input type="text" class="form-control" placeholder="" value="" />
+                                                        <input name="Size_Shaft" type="text" class="form-control" placeholder="" value="" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label>Over Head</label>
-                                                        <input type="text" class="form-control" placeholder="" value="" />
+                                                        <input name="Over_Head" type="text" class="form-control" placeholder="" value="" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label>Observation</label>
-                                                        <input type="text" class="form-control" placeholder="" value="" />
+                                                        <input name="Observation" type="text" class="form-control" placeholder="" value="" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -444,6 +447,7 @@
                                     <input type="submit" class="btnRegister"  value="Submit"/>
                                 </div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

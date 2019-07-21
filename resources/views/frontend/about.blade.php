@@ -66,50 +66,19 @@
             </div>
             <div class="clearfix">
                 <div class="owl-carousel owl-theme">
+                @foreach($testimonials as $row)
                     <div class="item">
                         <div class="single-testimonial-construct clearfix">
                             <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/1.jpg" alt="">
+                                <img src="{{asset('uploads/'.$row->thumb_250)}}" alt="">
                             </div>
                             <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
+                                <h3>{{$row->name_en}}<br/><span>{{$row->company_en}}</span></h3>
+                                <p>{{$row->description_en}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="single-testimonial-construct clearfix">
-                            <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/2.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="single-testimonial-construct clearfix">
-                            <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/1.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="single-testimonial-construct clearfix">
-                            <div class="img-holder hvr-rectangle-out">
-                                <img src="/site/en/images/testimonials-construct/2.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <h3>Jhon Michale<br/><span>Algerian Embassy</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach    
                 </div>
             </div>
         </div>
